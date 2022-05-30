@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body onload="carregaListaDespesas()">
+  <nav>
+    <img src="img/logo.svg" alt="" srcset="">
+    <a href="index.html">Cadastrar despesas</a>
+  </nav>
+  <main>
+    <div class="content">
+      <header>
+        <div class="header-right">
+          <div class="mybalance">my balance</div>
+          <div class="money">$921.48</div>
+        </div>
+        <div class="token">
+          <img src="img/logo.svg" alt="">
+        </div>
+      </header>
+      <section>
+        <div class="spending">
+          <span>Gastos - ultimos 7 dias</span>
+        </div>
+        <div class="statistic">
+          <div class="graphic">
+            <div class="ganhos">
+
+              <div id="dom" class="eixoY">
+                <div class="info">
+                  <span id="ndom"></span>
+                </div>
+              </div>
+              <div class="eixoX">dom</div>
+            </div>
+            <div class="ganhos">
+              <div id="seg" class="eixoY">
+                <div class="info">
+                  <span id="nseg"></span>
+                </div>
+              </div>
+              <div class="eixoX">seg</div>
+            </div>
+            <div class="ganhos">
+              <div id="ter" class="eixoY">
+                <div class="info">
+                  <span id="nter"></span>
+                </div>
+              </div>
+              <div class="eixoX">ter</div>
+            </div>
+            <div class="ganhos">
+              <div id="qua" class="eixoY">
+                <div class="info">
+                  <span id="nqua"></span>
+                </div>
+              </div>
+              <div class="eixoX">qua</div>
+            </div>
+            <div class="ganhos">
+              <div id="qui" class="eixoY">
+                <div class="info">
+                  <span id="nqui"></span>
+                </div>
+              </div>
+              <div class="eixoX">qui</div>
+            </div>
+            <div class="ganhos">
+              <div id="sex" class="eixoY">
+                <div class="info">
+                  <span id="nsex"></span>
+                </div>
+              </div>
+              <div class="eixoX">sex</div>
+            </div>
+            <div class="ganhos">
+              <div id="sab" class="eixoY">
+                <div class="info">
+                  <span id="nsab"></span>
+                </div>
+              </div>
+              <div class="eixoX">sáb</div>
+            </div>
+          </div>
+        </div>
+        <div class="totalMonth">
+          <div class="tmRight">
+            <div class="total">
+              Total desta semana
+            </div>
+            <div id="number" class="number">
+              
+            </div>
+          </div>
+          <div class="tmLeft">
+            <div class="percent">
+              +2.4%
+            </div>
+            <div class="flMonth">
+              from last month
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration: none;">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/rnlisboa" target="_blank" style="text-decoration: none;">Renan Lisboa</a>.
+  </footer>
+</body>
+<script src="app.js"></script>
+
+</html>

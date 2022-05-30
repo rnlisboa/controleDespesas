@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ list-style: none;   
+}
+:root {
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+    --border: 1px solid red;
+    --font-family:'DM Sans', sans-serif;
+}
+
+body{
+    background-color: var(--Cream);
+    font-family: var(--font-family);
+}
+nav{
+    width: 100%;
+    position: fixed;
+    background-color: var(--Soft-red);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+nav img{
+    width: 3rem;
+    margin-left: 2rem;
+}
+nav a{
+    margin-left: 1.5rem;
+    color: aliceblue;
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--Cream);
+}
+main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.content{
+    position: absolute;
+    top: 8rem;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    border-radius: .8rem;
+    width: 40rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: aliceblue;
+    background-color: var(--Soft-red);
+}
+.header-right{
+    position: absolute;
+    left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.money{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: .2rem;
+}
+.token{
+    position: absolute;
+    right: 1rem;
+    display: flex;    
+}
+.token img{
+    width: 3rem;
+}
+.header-right, .token{
+    height: 100%;
+}
+section{
+    border-radius: .8rem;
+    margin-top: 1rem;
+    width: 40rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--Very-pale-orange);
+}
+
+.spending{
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.spending span{
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--Dark-brown);
+}
+
+.totalMonth{
+    display: flex;
+    height: 25%;
+    position: relative;
+    align-items: center;
+}
+.tmRight{
+    position: absolute;
+    left: 1rem;
+    color: var(--Dark-brown);
+}
+.total, .flMonth{
+    font-size: .8rem;
+}
+.number{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.percent{
+    font-weight: 700;
+}
+.tmLeft{
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.flMonth, .total{
+    color: var(--Medium-brown);
+}
+
+
+
+/******  GRÁFICO   *******/
+.statistic{
+    height: 60%;
+    position: relative;
+}
+.graphic{
+    display: flex;
+    width: 100%;
+}
+.ganhos{
+    width: 14%;
+    margin-top: 4px;
+    height: 10rem;
+    font-size: .8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.eixoY{
+    position: absolute;
+    bottom: 1.5rem;
+    border-radius: .4rem;
+    width: 70%;
+    height: .1rem;
+    background-color: var(--Cyan);
+}
+
+.info{
+    width: 110%;
+    height: 2rem;
+    background-color: var(--Dark-brown);
+    position: absolute;
+    border-radius: .4rem;
+    top: -2.5rem;
+    left: -0.1875rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.eixoY:hover .info{
+    transition: all .1s;
+    visibility: visible;
+}
+
+.eixoY:hover{
+    transition: all .1s;
+    background-color: hsla(186, 34%, 60%, 0.836);
+}
+
+.info span{
+    color: aliceblue;
+}
+.eixoX{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+.hIndex p{
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+#mes, #dia, #desc, #valor, #btn{
+    height: 2.5rem;
+}
+#mes, #dia, #btn{
+    width: 80%;
+}
+.inpt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#desc{
+    width: 59%;
+}
+#valor{
+    width: 20%;
+}
+#btn{
+    background-color: var(--Soft-red);
+    border: none;
+    cursor: pointer;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+footer{
+    color:aliceblue;
+    text-align: center; 
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(10, 79%, 65%, 0.5);
+}
+
+@media (max-width: 851px)
+{
+  header, section{
+    width: 20rem;
+  }
+  section{
+    height: 19rem;
+  }
+  .hIndex p{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.info span{
+    font-size: .5rem;
+}
+}
